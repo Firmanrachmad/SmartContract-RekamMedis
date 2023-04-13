@@ -1,11 +1,12 @@
-pragma solidity 0.8.4;
+/// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
 
 contract RekamMedis {
 
     string public textRaw;
     address private owner;
 
-    constrctuor(){
+    constructor(){
         owner = msg.sender;
     }
 
@@ -13,5 +14,11 @@ contract RekamMedis {
         textRaw = _text;
     }
 
-    function 
+    function inc() external {
+        require(msg.sender == owner, "NOT_OWNER");
+    }
+
+    function getPemilik() public view returns(address){
+        return owner;
+    }
 } 

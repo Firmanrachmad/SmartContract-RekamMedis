@@ -15,7 +15,7 @@ async function main() {
   const RekamMedisFactory = await hre.ethers.getContractFactory("RekamMedis");
   const rm = await RekamMedisFactory.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
 
-  const textRaw = await rm.setText("Firman Rachmad Caesar")
+  const textRaw = await rm.setText("Bimbingan 2")
 
   console.log(`text = ${textRaw}`)
 }
